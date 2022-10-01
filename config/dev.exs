@@ -26,7 +26,8 @@ config :ask, AskWeb.Endpoint,
   secret_key_base: "h7jTYtlEKZtbE2/JLcUGXSzE/XF3vEXrhfuxyDc4Zw8t/ZroggECD+HI94Rlu3Hw",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
